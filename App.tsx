@@ -1,9 +1,11 @@
-import { Text, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import OnboardingNavigator from './navigation/OnboardingNavigator';
 
 export default function App() {
 	return (
-		<SafeAreaView>
-			<Text>Start the Help Kids App design</Text>
-		</SafeAreaView>
+		<NavigationContainer>
+			<OnboardingNavigator />
+		</NavigationContainer>
 	);
 }

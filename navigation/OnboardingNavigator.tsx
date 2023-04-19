@@ -7,7 +7,7 @@ import SignUpScreen from '../screens/Onboarding/SignUpScreen';
 
 const Stack = createStackNavigator();
 
-const OnboardingNavigator = () => {
+const OnboardingNavigator = () => (
 	<Stack.Navigator>
 		<Stack.Screen
 			name={Routes.WELCOME_SCREEN}
@@ -16,7 +16,7 @@ const OnboardingNavigator = () => {
 		/>
 		<Stack.Screen name={Routes.SIGNIN_SCREEN} component={SignInScreen} />
 		<Stack.Screen name={Routes.SIGNUP_SCREEN} component={SignUpScreen} />
-	</Stack.Navigator>;
-};
+	</Stack.Navigator>
+);
 
 export default OnboardingNavigator;
