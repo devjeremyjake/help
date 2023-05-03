@@ -1,9 +1,4 @@
-import {
-	View,
-	Text,
-	TouchableOpacity,
-	GestureResponderEvent,
-} from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { CreateResponsiveStyle, DEVICE_SIZES } from 'rn-responsive-styles';
 import {
@@ -18,7 +13,7 @@ import {
 
 type buttonComponentProps = {
 	title: string;
-	onPress: (e: GestureResponderEvent) => void;
+	onPress: () => void;
 };
 
 const ButtonComponent = ({ onPress, title }: buttonComponentProps) => {

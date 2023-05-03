@@ -8,10 +8,13 @@ type formFieldProps = {
 	name: string;
 };
 
+type formikContextProps = {
+	[key: string]: string;
+};
+
 const FormField = ({ name }: formFieldProps) => {
 	const { setFieldTouched, setFieldValue, errors, touched, values } =
-		useFormikContext();
-
+		useFormikContext<formikContextProps>();
 	return (
 		<>
 			<TextInput

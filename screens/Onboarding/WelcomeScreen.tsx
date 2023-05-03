@@ -39,7 +39,7 @@ const WelcomeScreen = () => {
 			<View style={styles.actionButton}>
 				<ButtonComponent
 					title="Start to help"
-					onPress={() => navigation.navigate(Routes.SIGNIN_SCREEN)}
+					onPress={() => navigation.navigate(Routes.SIGNIN_SCREEN as never)}
 				/>
 			</View>
 		</SafeAreaScreen>

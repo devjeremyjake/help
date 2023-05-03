@@ -2,12 +2,12 @@ import React from 'react';
 import { Text } from 'react-native';
 
 type errorMessageProps = {
-	error: undefined;
-	visible: undefined;
+	error: any;
+	visible: any;
 };
 
 function ErrorMessage({ error, visible }: errorMessageProps) {
-	return <Text>ErrorMessage</Text>;
+	return <Text>{error}</Text>;
 }
 
 export default ErrorMessage;
