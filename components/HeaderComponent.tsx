@@ -14,7 +14,12 @@ const HeaderComponent = ({ title }: headerProps) => {
 	return (
 		<View style={styles.navWrapper}>
 			<TouchableWithoutFeedback onPress={() => navigation.goBack()}>
-				<Ionicons name="chevron-back" size={34} color="black" />
+				<Ionicons
+					name="chevron-back"
+					size={34}
+					color="black"
+					style={styles.backButton}
+				/>
 			</TouchableWithoutFeedback>
 			<Text style={styles.navTitle}>{title}</Text>
 			<View />
@@ -28,12 +33,14 @@ const useStyles = CreateResponsiveStyle({
 		alignItems: 'center',
 		justifyContent: 'space-between',
 		marginBottom: 20,
-		paddingHoriontal: 20,
 	},
 	navTitle: {
 		fontFamily: FONT_FAMILY_400,
 		fontSize: FONT_SIZE_2,
 		marginLeft: -10,
+	},
+	backButton: {
+		marginLeft: 10,
 	},
 });
 

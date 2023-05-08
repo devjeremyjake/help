@@ -2,9 +2,9 @@ import React from 'react';
 import { Formik } from 'formik';
 
 type appFormProps = {
-	onSubmit: () => void;
+	onSubmit: (e: { email: string; password: string }) => void;
 	children: React.ReactNode;
-	initialValues: object;
+	initialValues: { email: string; password: string };
 	validationSchema: object;
 };
 
@@ -18,7 +18,7 @@ const AppForm = ({
 		<Formik
 			initialValues={initialValues}
 			onSubmit={onSubmit}
-			validateSchema={validationSchema}
+			validationSchema={validationSchema}
 		>
 			{() => <>{children}</>}
 		</Formik>

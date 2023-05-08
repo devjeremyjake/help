@@ -1,5 +1,6 @@
 export const FONT_SIZE_1 = 30;
 export const FONT_SIZE_2 = 18;
+export const FONT_SIZE_3 = 16;
 
 export const COLOR_RICH_BLACK = '#051923';
 export const COLOR_STEEL_BLUE = '#0582ca';
@@ -8,9 +9,9 @@ export const COLOR_LAPIZ = '#006494';
 export const COLOR_WHITE = '#fff';
 export const COLOR_GREY = '#bebebe';
 
-export const FONT_WEIGHT_2 = 700;
-export const FONT_WEIGHT_3 = 500;
-export const FONT_WEIGHT_4 = 400;
+export const FONT_WEIGHT_2 = '700';
+export const FONT_WEIGHT_3 = '500';
+export const FONT_WEIGHT_4 = '400';
 
 export const DIMENSIONS_1 = 23;
 export const DIMENSIONS_2 = 20;
