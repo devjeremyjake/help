@@ -3,9 +3,9 @@ import { Image } from 'expo-image';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { CreateResponsiveStyle, DEVICE_SIZES } from 'rn-responsive-styles';
-import ButtonComponent from '../../components/ButtonComponent';
-import SafeAreaScreen from '../../components/SafeAreaScreen';
-import Routes from '../../navigation/routes';
+import ButtonComponent from '../../../Components/ButtonComponent';
+import SafeAreaComponent from '../../../Components/SafeAreaComponent';
+import Routes from '../../../navigation/routes';
 import {
 	COLOR_RICH_BLACK,
 	FONT_SIZE_1,
@@ -14,17 +14,17 @@ import {
 	FONT_FAMILY_900,
 	DIMENSIONS_2,
 	COLOR_GREY,
-} from '../../constants';
+} from '../../../constants';
 
 const WelcomeScreen = () => {
 	const styles = useStyles();
 	const navigation = useNavigation();
 
 	return (
-		<SafeAreaScreen>
+		<SafeAreaComponent>
 			<Image
 				style={styles.image}
-				source={require('../../assets/boy-background.jpg')}
+				source={require('../../../assets/boy-background.jpg')}
 				placeholder={'blurhash'}
 				contentFit="cover"
 				transition={1000}
@@ -42,7 +42,7 @@ const WelcomeScreen = () => {
 					onPress={() => navigation.navigate(Routes.SIGNIN_SCREEN as never)}
 				/>
 			</View>
-		</SafeAreaScreen>
+		</SafeAreaComponent>
 	);
 };
 

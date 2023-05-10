@@ -2,12 +2,12 @@ import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import React from 'react';
 import * as Yup from 'yup';
 import { StackNavigationProp } from '@react-navigation/stack';
-import SafeAreaScreen from '../../components/SafeAreaScreen';
-import HeaderComponent from '../../components/HeaderComponent';
-import DividerComponent from '../../components/DividerComponent';
-import { Form, FormField, SubmitButton } from '../../components/forms';
+import SafeAreaComponent from '../../../Components/SafeAreaComponent';
+import HeaderComponent from '../../../Components/HeaderComponent';
+import DividerComponent from '../../../Components/DividerComponent';
+import { Form, FormField, SubmitButton } from '../../../Components/Forms';
 import { CreateResponsiveStyle } from 'rn-responsive-styles';
-import Routes from '../../navigation/routes';
+import Routes from '../../../navigation/routes';
 import {
 	DIMENSIONS_1,
 	FONT_SIZE_2,
@@ -15,7 +15,7 @@ import {
 	FONT_WEIGHT_3,
 	COLOR_RICH_BLACK,
 	COLOR_PRUSSIAN_BLUE,
-} from '../../constants';
+} from '../../../constants';
 
 type RootStackParamList = {
 	SIGNIN_SCREEN: undefined;
@@ -49,8 +49,8 @@ const SignInScreen = ({ navigation }: signInProps) => {
 	};
 
 	return (
-		<SafeAreaScreen>
-			<HeaderComponent title="Log In" />
+		<SafeAreaComponent>
+			<HeaderComponent title="Sign In" />
 			<Form
 				initialValues={{ email: '', password: '' }}
 				onSubmit={handleSubmit}
@@ -70,7 +70,7 @@ const SignInScreen = ({ navigation }: signInProps) => {
 						textContentType="password"
 						secureTextEntry
 					/>
-					<SubmitButton title="Login" />
+					<SubmitButton title="Continue" />
 				</View>
 			</Form>
 			<DividerComponent />
@@ -84,7 +84,7 @@ const SignInScreen = ({ navigation }: signInProps) => {
 					</View>
 				</TouchableWithoutFeedback>
 			</View>
-		</SafeAreaScreen>
+		</SafeAreaComponent>
 	);
 };
 

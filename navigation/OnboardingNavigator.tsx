@@ -1,9 +1,9 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import Routes from './routes';
 
-import WelcomeScreen from '../screens/Onboarding/WelcomeScreen';
-import SignInScreen from '../screens/Onboarding/SignInScreen';
-import SignUpScreen from '../screens/Onboarding/SignUpScreen';
+import WelcomeScreen from '../screens/Onboarding/WelcomeScreen/WelcomeScreen';
+import SignInScreen from '../screens/Onboarding/SignInScreen/SignInScreen';
+import SignUpScreen from '../screens/Onboarding/SignUpScreen/SignUpScreen';
 
 type RootStackParamList = {
 	WELCOME_SCREEN: undefined;

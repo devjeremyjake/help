@@ -3,6 +3,8 @@ import { useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import OnboardingNavigator from './navigation/OnboardingNavigator';
+import NavigationTheme from './navigation/NavigationTheme';
+import AppNavigator from './navigation/AppNavigator';
 import {
 	useFonts,
 	Lato_100Thin,
@@ -18,7 +20,6 @@ export default function App() {
 		Lato_300Light,
 		Lato_400Regular,
 		Lato_900Black,
-		Lato_900Black,
 	});
 
 	const onLayoutRootView = useCallback(async () => {
@@ -28,8 +29,9 @@ export default function App() {
 	}, [fontsLoaded]);
 	return (
 		<View onLayout={onLayoutRootView} style={{ flex: 1 }}>
-			<NavigationContainer>
-				<OnboardingNavigator />
+			<NavigationContainer theme={NavigationTheme}>
+				{/* <OnboardingNavigator /> */}
+				<AppNavigator />
 			</NavigationContainer>
 		</View>
 	);

@@ -2,6 +2,7 @@ import { TextInput, View } from 'react-native';
 import React from 'react';
 import { CreateResponsiveStyle } from 'rn-responsive-styles';
 import { useFormikContext } from 'formik';
+import ErrorMessage from './ErrorMessage';
 import {
 	COLOR_GREY,
 	COLOR_RICH_BLACK,
@@ -12,13 +13,11 @@ import {
 	FONT_FAMILY_400,
 } from '../../constants';
 
-import ErrorMessage from './ErrorMessage';
-
 type formFieldProps = {
 	name: string;
 	autoCorrect: boolean;
 	placeholder: string;
-	textContentType: any;
+	textContentType?: any;
 	secureTextEntry?: boolean;
 };
 
