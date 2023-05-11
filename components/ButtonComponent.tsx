@@ -4,7 +4,7 @@ import { CreateResponsiveStyle, DEVICE_SIZES } from 'rn-responsive-styles';
 import {
 	DIMENSIONS_1,
 	COLOR_WHITE,
-	COLOR_LAPIZ,
+	COLOR_PRUSSIAN_BLUE,
 	DIMENSIONS_3,
 	FONT_SIZE_2,
 	FONT_FAMILY_700,
@@ -29,7 +29,7 @@ const ButtonComponent = ({ onPress, title }: buttonComponentProps) => {
 
 const useStyles = CreateResponsiveStyle({
 	container: {
-		backgroundColor: COLOR_LAPIZ,
+		backgroundColor: COLOR_PRUSSIAN_BLUE,
 		marginVertical: DIMENSIONS_3,
 		paddingVertical: DIMENSIONS_2,
 		borderRadius: DIMENSIONS_1,

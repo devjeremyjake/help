@@ -1,6 +1,7 @@
 export const FONT_SIZE_1 = 30;
 export const FONT_SIZE_2 = 18;
 export const FONT_SIZE_3 = 16;
+export const FONT_SIZE_4 = 23;
 
 export const COLOR_RICH_BLACK = '#051923';
 export const COLOR_STEEL_BLUE = '#0582ca';
