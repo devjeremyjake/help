@@ -52,7 +52,7 @@ const SignInScreen = ({ navigation }: signInProps) => {
 		<SafeAreaComponent>
 			<HeaderComponent title="Sign In" />
 			<Form
-				initialValues={{ email: '', password: '' }}
+				initialValues={{ email: '', password: '', fullname: '' }}
 				onSubmit={handleSubmit}
 				validationSchema={validationSchema}
 			>

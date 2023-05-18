@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 type appFormProps = {
 	onSubmit: (e: { email: string; password: string; fullname: string }) => void;
 	children: React.ReactNode;
-	initialValues: { email: string; password: string; fullname?: string };
+	initialValues: { email: string; password: string; fullname: string };
 	validationSchema: object;
 };
 

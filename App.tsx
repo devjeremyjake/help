@@ -30,8 +30,8 @@ export default function App() {
 	return (
 		<View onLayout={onLayoutRootView} style={{ flex: 1 }}>
 			<NavigationContainer theme={NavigationTheme}>
-				{/* <OnboardingNavigator /> */}
-				<AppNavigator />
+				<OnboardingNavigator />
+				{/* <AppNavigator /> */}
 			</NavigationContainer>
 		</View>
 	);

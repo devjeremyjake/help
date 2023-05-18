@@ -57,14 +57,9 @@ const useStyle = CreateResponsiveStyle({
 		borderRadius: 20,
 	},
 	searchIconWrapper: {
-		borderWidth: 1,
-		borderColor: COLOR_GREY,
-		width: 36,
-		height: 36,
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		borderRadius: 20,
 	},
 });
 
