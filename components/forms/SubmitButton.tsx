@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormikContext } from 'formik';
 
-import ButtonComponent from '../ButtonComponent';
+import ButtonComponent from '../ButtonComponent/ButtonComponent';
 
 type submitButtonProps = {
 	title: string;

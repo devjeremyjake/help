@@ -3,7 +3,7 @@ import { Image } from 'expo-image';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { CreateResponsiveStyle, DEVICE_SIZES } from 'rn-responsive-styles';
-import ButtonComponent from '../../../Components/ButtonComponent';
+import ButtonComponent from '../../../Components/ButtonComponent/ButtonComponent';
 import SafeAreaComponent from '../../../Components/SafeAreaComponent';
 import Routes from '../../../navigation/routes';
 import {
