@@ -33,7 +33,7 @@ type signInProps = {
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string().required().email().label('Email'),
-	password: Yup.string().required('Password is required'),
+	password: Yup.string().required('Password is a required field'),
 });
 
 const SignInScreen = ({ navigation }: signInProps) => {
@@ -52,7 +52,7 @@ const SignInScreen = ({ navigation }: signInProps) => {
 		<SafeAreaComponent>
 			<HeaderComponent title="Sign In" />
 			<Form
-				initialValues={{ email: '', password: '', fullname: '' }}
+				initialValues={{ email: '', password: '', fullname: '', username: '' }}
 				onSubmit={handleSubmit}
 				validationSchema={validationSchema}
 			>

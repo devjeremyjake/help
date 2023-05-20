@@ -1,27 +1,14 @@
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import React from 'react';
-import SafeAreaScreen from '../../../Components/SafeAreaComponent';
-import AccountBalance from '../../../Components/AccountBalance/AccountBalance';
 import DashboardHeader from '../../../Components/DashboardHeaderComponent/DashboardHeader';
-import { CreateResponsiveStyle } from 'rn-responsive-styles';
-
+import FavoritesComponent from '../../../Components/FavoritesComponent/FavoritesComponent';
 const HomeScreen = () => {
-	const styles = useStyle();
 	return (
-		<SafeAreaScreen>
-			<View style={styles.containerWrapper}>
-				<DashboardHeader />
-				<AccountBalance />
-			</View>
-		</SafeAreaScreen>
+		<ScrollView>
+			<DashboardHeader />
+			<FavoritesComponent />
+		</ScrollView>
 	);
 };
-
-const useStyle = CreateResponsiveStyle({
-	containerWrapper: {
-		marginHorizontal: 20,
-		marginTop: 20,
-	},
-});
 
 export default HomeScreen;

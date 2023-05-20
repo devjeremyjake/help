@@ -33,8 +33,9 @@ type signUpProps = {
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string().required().email().label('Email'),
-	password: Yup.string().required('Password is required'),
+	password: Yup.string().required('Password is a required field'),
 	fullname: Yup.string().required().label('Fullname'),
+	username: Yup.string().required().label('Username'),
 });
 
 const SignUpScreen = ({ navigation }: signUpProps) => {
@@ -43,18 +44,20 @@ const SignUpScreen = ({ navigation }: signUpProps) => {
 		email,
 		password,
 		fullname,
+		username,
 	}: {
 		email: string;
 		password: string;
 		fullname: string;
+		username: string;
 	}) => {
-		console.warn('Reached here', { email, password });
+		console.warn('Reached here', { email, password, fullname, username });
 	};
 	return (
 		<SafeAreaComponent>
 			<HeaderComponent title="Sign Up" />
 			<Form
-				initialValues={{ fullname: '', email: '', password: '' }}
+				initialValues={{ fullname: '', email: '', password: '', username: '' }}
 				onSubmit={handleSubmit}
 				validationSchema={validationSchema}
 			>
@@ -63,6 +66,11 @@ const SignUpScreen = ({ navigation }: signUpProps) => {
 						autoCorrect={false}
 						name="fullname"
 						placeholder="Fullname"
+					/>
+					<FormField
+						autoCorrect={false}
+						name="username"
+						placeholder="Username"
 					/>
 					<FormField
 						autoCorrect={false}
