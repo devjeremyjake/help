@@ -2,33 +2,6 @@ import React from 'react';
 import { render } from '@testing-library/react-native';
 import DateComponent from './DateComponent';
 
-// jest.mock('expo-location');
-
-// jest.mock('@expo/vector-icons', () => {
-// 	const React = require('react');
-// 	const { View } = require('react-native');
-
-// 	const Icon = ({
-// 		name,
-// 		size,
-// 		color,
-// 	}: {
-// 		name: string;
-// 		size: number;
-// 		color: string;
-// 	}) => (
-// 		<View>
-// 			Mocked Icon: {name} {size} {color}
-// 		</View>
-// 	);
-
-// 	return {
-// 		Ionicons: Icon,
-// 		AntDesign: Icon,
-// 		// Include other icons you want to mock...
-// 	};
-// });
-
 describe('<DateComponent />', () => {
 	const setUpDateDisplay = () => render(<DateComponent />);
 	it('should render correctly on the screen', () => {

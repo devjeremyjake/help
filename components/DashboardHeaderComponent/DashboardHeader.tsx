@@ -14,7 +14,6 @@ import {
 	COLOR_RICH_BLACK,
 	DIMENSIONS_3,
 	COLOR_GREY,
-	COLOR_LAPIZ,
 } from '../../constants';
 import useLocation from '../../hooks/useLocation/useLocation';
 import { FontAwesome, Ionicons, AntDesign } from '@expo/vector-icons';
@@ -40,7 +39,7 @@ const DashboardHeader = () => {
 					<View style={useStyles.locationContainer}>
 						<Ionicons name="location-outline" size={20} color={COLOR_WHITE} />
 						<Text style={useStyles.locationText}>
-							{address[0]?.city} {address[0]?.country}
+							{address?.[0]?.city} {address?.[0]?.country}
 						</Text>
 					</View>
 				</SafeAreaScreen>
