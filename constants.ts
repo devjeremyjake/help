@@ -10,6 +10,7 @@ export const COLOR_PRUSSIAN_BLUE = '#003554';
 export const COLOR_LAPIZ = '#006494';
 export const COLOR_WHITE = '#fff';
 export const COLOR_GREY = '#bebebe';
+export const COLOR_LIGHT_GREY = '#fafafa';
 
 export const FONT_WEIGHT_2 = '700';
 export const FONT_WEIGHT_3 = '500';
