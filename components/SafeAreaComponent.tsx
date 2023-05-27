@@ -1,4 +1,4 @@
-import { SafeAreaView, View } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import React, { FC } from 'react';
 import { CreateResponsiveStyle } from 'rn-responsive-styles';
 

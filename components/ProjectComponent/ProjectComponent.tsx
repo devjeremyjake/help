@@ -1,22 +1,14 @@
-import {
-	View,
-	Text,
-	TouchableWithoutFeedback,
-	FlatList,
-	Dimensions,
-} from 'react-native';
+import { View, Text, TouchableWithoutFeedback, FlatList } from 'react-native';
 import StyleProvider from '../../helpers/combineStyles';
 import { AntDesign } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import CardHorizontalComponent from '../CardHorizontalComponent/CardHorizontalComponent';
+import CardVerticalComponent from '../CardVerticalComponent/CardVerticalComponent';
 import {
 	DIMENSIONS_2,
 	COLOR_RICH_BLACK,
 	FONT_SIZE_2,
 	FONT_FAMILY_900,
 } from '../../constants';
-import { FAVORITES } from './Data';
-import Routes from '../../navigation/routes';
+import { PROJECTS } from './Data';
 
 enum deviceWidth {
 	MD = 768,
@@ -24,12 +16,11 @@ enum deviceWidth {
 	XS = 450,
 }
 
-const FavoritesComponent = () => {
-	const navigation = useNavigation() as any;
+const ProjectComponent = () => {
 	return (
 		<View style={useStyles.container}>
 			<View style={useStyles.headingContainer}>
-				<Text style={useStyles.headingText}>Favorites</Text>
+				<Text style={useStyles.headingText}>Projects</Text>
 				<TouchableWithoutFeedback onPress={() => null}>
 					<View>
 						<AntDesign name="arrowright" size={26} color={COLOR_RICH_BLACK} />
@@ -40,22 +31,12 @@ const FavoritesComponent = () => {
 				<FlatList
 					showsVerticalScrollIndicator={false}
 					showsHorizontalScrollIndicator={false}
-					horizontal
-					snapToAlignment="start"
-					decelerationRate={'fast'}
-					snapToInterval={
-						Dimensions.get('window').width * 0.8 +
-						Dimensions.get('window').width * 0.07
-					}
 					scrollEnabled={true}
-					data={FAVORITES}
+					data={PROJECTS}
 					renderItem={({ item }) => (
-						<CardHorizontalComponent
-							onPress={() => navigation.navigate(Routes.CARD_DETAILS, { item })}
-							{...item}
-						/>
+						<CardVerticalComponent onPress={() => null} {...item} />
 					)}
-					ItemSeparatorComponent={() => <View style={{ marginRight: 10 }} />}
+					ItemSeparatorComponent={() => <View style={{ marginBottom: 20 }} />}
 				/>
 			</View>
 		</View>
@@ -74,6 +55,7 @@ const useStyles = {
 		deviceWidth.SM,
 		{
 			marginBottom: 10,
+			marginTop: 20,
 			display: 'flex',
 			alignItems: 'center',
 			flexDirection: 'row',
@@ -93,4 +75,4 @@ const useStyles = {
 	),
 };
 
-export default FavoritesComponent;
+export default ProjectComponent;

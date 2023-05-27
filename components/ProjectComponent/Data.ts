@@ -1,4 +1,4 @@
-export const FAVORITES = [
+export const PROJECTS = [
 	{
 		id: 1,
 		title: 'Drinking water stand',

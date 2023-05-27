@@ -20,7 +20,7 @@ describe('<FormField />', () => {
 		const inputElement = getByPlaceholderText('Enter Email');
 		expect(inputElement).toBeOnTheScreen();
 	});
-	it('updates values of FormField component on change', async () => {
+	it('updates values of FormField component on change', () => {
 		useFormikContext.mockReturnValue({
 			...formikMockValue,
 			values: { email: 'Hello@gmail.com' },

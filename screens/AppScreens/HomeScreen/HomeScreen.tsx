@@ -1,13 +1,15 @@
-import { ScrollView } from 'react-native';
 import React from 'react';
+import ScrollViewComponent from '../../../Components/ScrollViewComponent';
 import DashboardHeader from '../../../Components/DashboardHeaderComponent/DashboardHeader';
 import FavoritesComponent from '../../../Components/FavoritesComponent/FavoritesComponent';
+import ProjectComponent from '../../../Components/ProjectComponent/ProjectComponent';
 const HomeScreen = () => {
 	return (
-		<ScrollView>
+		<ScrollViewComponent>
 			<DashboardHeader />
 			<FavoritesComponent />
-		</ScrollView>
+			<ProjectComponent />
+		</ScrollViewComponent>
 	);
 };
 

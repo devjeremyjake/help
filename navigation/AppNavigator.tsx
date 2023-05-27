@@ -18,7 +18,6 @@ const AppNavigator = () => (
 				tabBarIcon: ({ color, size }) => (
 					<AntDesign name="home" color={color} size={size} />
 				),
-				// headerShown: false,
 			}}
 		/>
 		<Tab.Screen

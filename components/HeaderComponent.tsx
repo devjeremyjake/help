@@ -38,6 +38,9 @@ const useStyles = CreateResponsiveStyle({
 		fontFamily: FONT_FAMILY_400,
 		fontSize: FONT_SIZE_2,
 		marginLeft: -10,
+		flexWrap: 'wrap',
+		width: '60%',
+		textAlign: 'center',
 	},
 	backButton: {
 		marginLeft: 10,

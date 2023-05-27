@@ -21,6 +21,6 @@ export const DIMENSIONS_2 = 20;
 export const DIMENSIONS_3 = 10;
 export const DIMENSIONS_4 = 5;
 
-export const FONT_FAMILY_700 = 'Lato_700Black';
-export const FONT_FAMILY_400 = 'Lato_400Regular,';
-export const FONT_FAMILY_900 = 'Lato_900Black';
+export const FONT_FAMILY_700 = 'Lato-Regular';
+export const FONT_FAMILY_400 = 'Lato-Thin';
+export const FONT_FAMILY_900 = 'Lato-Bold';
