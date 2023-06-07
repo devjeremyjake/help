@@ -2,7 +2,6 @@ import { Text, TouchableWithoutFeedback, View } from 'react-native';
 
 import SafeAreaScreen from '../../../Components/SafeAreaComponent';
 import HeaderComponent from '../../../Components/HeaderComponent';
-import ScrollViewComponent from '../../../Components/ScrollViewComponent';
 import StyleProvider from '../../../helpers/combineStyles';
 import React, { useState } from 'react';
 import {
@@ -13,9 +12,11 @@ import {
 	FONT_FAMILY_900,
 	COLOR_RICH_BLACK,
 	COLOR_WHITE,
+	COLOR_PRUSSIAN_BLUE,
 } from '../../../constants';
 import DetailsPeopleTab from '../../../Components/DetailsPeopleTab/DetailsPeopleTab';
 import DetailsInformationTab from '../../../Components/DetailsInformationTab/DetailsInformationTab';
+import ButtonComponent from '../../../Components/ButtonComponent/ButtonComponent';
 
 type routeParam = {
 	route: {
@@ -24,9 +25,25 @@ type routeParam = {
 				title: string;
 				desc: string;
 				image: string;
+				author: authorType;
+				contributors: contibutorsType[];
 			};
 		};
 	};
+};
+
+type authorType = {
+	id: number;
+	name: string;
+	image: string;
+};
+
+type contibutorsType = {
+	id: number;
+	name: string;
+	nationality: string;
+	amountAdded: number;
+	image: string;
 };
 
 enum deviceWidth {
@@ -36,7 +53,7 @@ enum deviceWidth {
 }
 
 const CardDetails = ({ route }: routeParam) => {
-	const { title, desc, image } = route.params?.item;
+	const { title, desc, image, author, contributors } = route.params?.item;
 	const [currentTab, setCurrentTab] = useState(1);
 
 	const updateTab = (value: number) => {
@@ -61,30 +78,31 @@ const CardDetails = ({ route }: routeParam) => {
 
 	const CurrentTabIndex = () =>
 		currentTab === 1 ? (
-			<DetailsInformationTab desc={desc} image={image} />
+			<DetailsInformationTab desc={desc} image={image} author={author} />
 		) : (
-			<DetailsPeopleTab />
+			<DetailsPeopleTab contributors={contributors} />
 		);
 	return (
 		<SafeAreaScreen>
 			<HeaderComponent title={title} />
-			<ScrollViewComponent>
-				<View style={useStyles.container}>
-					<View style={useStyles.sectionNavigator}>
-						<TouchableWithoutFeedback onPress={() => updateTab(1)}>
-							<View style={currentTabStyleOne}>
-								<Text style={currentTabText}>Campaign</Text>
-							</View>
-						</TouchableWithoutFeedback>
-						<TouchableWithoutFeedback onPress={() => updateTab(2)}>
-							<View style={currentTabStyleTwo}>
-								<Text style={currentTabTextTwo}>Supporters</Text>
-							</View>
-						</TouchableWithoutFeedback>
-					</View>
-					<CurrentTabIndex />
+			<View style={useStyles.container}>
+				<View style={useStyles.sectionNavigator}>
+					<TouchableWithoutFeedback onPress={() => updateTab(1)}>
+						<View style={currentTabStyleOne}>
+							<Text style={currentTabText}>Campaign</Text>
+						</View>
+					</TouchableWithoutFeedback>
+					<TouchableWithoutFeedback onPress={() => updateTab(2)}>
+						<View style={currentTabStyleTwo}>
+							<Text style={currentTabTextTwo}>Supporters</Text>
+						</View>
+					</TouchableWithoutFeedback>
 				</View>
-			</ScrollViewComponent>
+				<CurrentTabIndex />
+			</View>
+			<View style={useStyles.buttonPosition}>
+				<ButtonComponent title="Donate" onPress={() => null} />
+			</View>
 		</SafeAreaScreen>
 	);
 };
@@ -94,6 +112,7 @@ const useStyles = {
 		deviceWidth.SM,
 		{
 			paddingHorizontal: DIMENSIONS_2,
+			flex: 1,
 		},
 		[]
 	),
@@ -123,7 +142,7 @@ const useStyles = {
 	sectionSingleActive: StyleProvider(
 		deviceWidth.SM,
 		{
-			backgroundColor: COLOR_RICH_BLACK,
+			backgroundColor: COLOR_PRUSSIAN_BLUE,
 		},
 		[]
 	),
@@ -149,6 +168,16 @@ const useStyles = {
 			color: COLOR_WHITE,
 			fontSize: FONT_SIZE_3,
 			fontFamily: FONT_FAMILY_900,
+		},
+		[]
+	),
+	buttonPosition: StyleProvider(
+		deviceWidth.SM,
+		{
+			position: 'absolute',
+			left: 20,
+			bottom: 20,
+			width: '90%',
 		},
 		[]
 	),

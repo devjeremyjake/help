@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import { View, Text, FlatList } from 'react-native';
+import React, { memo } from 'react';
 
-const DetailsPeopleTab = () => {
+const DetailsPeopleTab = ({ contributors }) => {
 	return (
 		<View>
 			<Text>DetailsPeopleTab</Text>
@@ -9,4 +9,4 @@ const DetailsPeopleTab = () => {
 	);
 };
 
-export default DetailsPeopleTab;
+export default memo(DetailsPeopleTab);
